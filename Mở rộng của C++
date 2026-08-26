@@ -1,1 +1,33 @@
+Các lớp mở rộng của C++
+- Các từ khóa mới của C++
+class, delete, friend, inline, new, operator, private, protected, public, this, virtual …
+- Cách ghi chú thích**
+  *Hai kiểu chú thích*
+  `/* chú thích */`và `//chú thích trên một dòng`
+- Dòng nhập/xuất chuẩn
++ Sử dụng cin/cout (iostream.h) để nhập/xuất
+- Cách chuyển đổi kiểu dữ liệu
++ Kiểu(Biểu thức)
+
+- Vị trí khai báo biến
++ Cho phép khai báo linh hoạt bất kỳ vị trí nào trong một phạm vi cho trước
++ Xen kẽ khai báo dữ liệu với các câu lệnh thực hiện.
+
+- Hằng định kiểu
++ const Kiểu Tên=Biểu_thức;
++ const int MAXSIZE=1000;
+
+- Đối với cấu trúc
+
+typedef struct {
+int x,y, color;
+}PIXEL;
+const PIXEL p={100, 100, 15};
+
+struct, union
+
+– thực sự là các kiểu class
+
+– tên của struct và union được xem luôn là tên kiểu giống như khai báo bằng lệnh typedef
+
 
