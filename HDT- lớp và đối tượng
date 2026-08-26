@@ -1,6 +1,6 @@
 Lớp và đối tượng :
 1. Khái niệm & Cấu trúc của Lớp (Class)
-Bản chất: Lớp là sự mở rộng của struct (C) và record (Pascal), bao gồm các thuộc tính (dữ liệu) và phương thức (hàm thành viên).
++ Bản chất: Lớp là sự mở rộng của struct (C) và record (Pascal), bao gồm các thuộc tính (dữ liệu) và phương thức (hàm thành viên).
 
 Phạm vi truy cập:
 private: Mặc định nếu không chỉ định. Chỉ được truy cập nội bộ trong thân lớp.
