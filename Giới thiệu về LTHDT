@@ -19,3 +19,15 @@ các thực thể trong hệ thống thực hiện khi chương trình đang ch�
 +khái niệm kế thừa
 +khái niệm đóng gói
 +khái niệm đa hình
+-Thành phần private và public
++ Đặc điểm truy cập:
+Là phạm vi hoạt động nội bộ của class, hoàn toàn cách ly và không chia sẻ ra bên ngoài.
+Chỉ các phương thức nằm trong cùng class mới có quyền truy xuất trực tiếp các thành phần này.
+Các thành phần thường được đưa vào khu vực private:
++ Toàn bộ các thuộc tính (dữ liệu/biến thành viên) của class nhằm đảm bảo tính đóng gói.
++ Các phương thức hỗ trợ (hàm phụ trợ/trung gian) phục vụ cho tính toán đệm nội bộ bên trong class.
+- Thành phần public
++ Khái niệm: Lớp chia sẻ phạm vi này với mọi chương trình và đối tượng bên ngoài. Có thể truy cập ở cả trong lẫn ngoài lớp.
+ * Các thành phần thường đặt ở vùng public:
+ * Các hàm dùng để nhập hoặc xem (set/get) thuộc tính dữ liệu.
+ * Các hàm cung cấp tính năng, hành vi của đối tượng đối với bên ngoài (thể hiện chức năng của lớp).
