@@ -1,2 +1,15 @@
-Giới thiệu về lập trình hướng đối tượng
-1. Lập 
+1.Giới thiệu về LTHDT:
+
+Lập trình tuyến tính là tư duy theo lối tuần tự.
+Đặc trưng có đơn giản và phân luồng.
+Lập trình cấu trúc là chương trình được chia nhỏ.
+Đặc trưng: chương trình=cấu trúc dữ liệu+giải thuật.
+Có 2 phương pháp tiếp cận HDT.
+Có các khái niệm:
+đối tượng
+lớp đối tượng
+trừu tượng hóa đối tượng theo chức năng
+trừu tượng hóa đối tượng theo dữ liệu
+khái niệm kế thừa
+khái niệm đóng gói
+khái niệm đa hình
