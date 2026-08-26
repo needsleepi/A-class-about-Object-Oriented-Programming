@@ -1,1 +1,48 @@
-
+1. Các mở rộng của C++:
+- Các từ khóa mới: class, delete, , inline, new,...
+- Cách ghi chú thích: /* ghi chú */ hoặc //ghi chú trên cùng một dòng
+- cin/cout (iostream.h) để nhập/xuất chuẩn
+- Ép kiểu: Kiểu (Biểu thức)
+VD: int a;
+    float b = float(a);
+- Vị trí khai báo biến: xen kẽ khai báo dữ liệu với các câu lệnh thực hiện.
+- Hằng định kiểu: const Kiểu Tên=Biểu_thức;
+VD: const int MAXSIZE=1000;
+- Đối với cấu trúc:
+VD: typedef struct {
+             int x,y, color;
+        }PIXEL;
+const PIXEL p={100, 100, 15};
+- struct, union: Là các kiểu class.
+- Toán tử định vị phạm vi:
++ Truy xuất bị che: Dùng để gọi các biến hoặc hàm toàn cục bị biến cục bộ che mất tệp tên.
++ Định nghĩa phương thức: Dùng khi định nghĩa thân hàm của lớp ở bên ngoài phần khai báo của lớp đó.
++ Giải quyết xung đột: Phân biệt các phương thức hoặc thuộc tính trùng tên trong các lớp cơ sở (khi kế thừa).
+- Cấp phát và giải phóng bộ nhớ động (new, delete):
++ Toán tử new: Dùng để cấp phát bộ nhớ động trên bộ nhớ Heap (linh hoạt hơn các hàm malloc/calloc của C).
++ Cú pháp: new Kiểu hoặc new Kiểu(giá_trị_khởi_tạo).
++ Xử lý lỗi: Trả về NULL nếu cấp phát không thành công.
++ Toán tử delete: Dùng để giải phóng bộ nhớ đã cấp phát.
++ Biến đơn: delete Con_trỏ; Mảng: delete[] Con_trỏ.
+- Ánh xạ mảng 2 chiều thành mảng 1 chiều
++ Mảng 2 chiều kích thước mxn có thể lưu trữ dưới dạng mảng 1 chiều tuyến tính.
++ Công thức chuyển đổi: Phần tử ở hàng ixj trong mảng 2D tương ứng với vị trí chỉ số k trong mảng 1D theo công thức:
+k = n + j. 
+- Hàm Inline (inline):
++ Cơ chế: Trình biên dịch chèn trực tiếp mã nguồn của hàm vào vị trí được gọi nhằm giảm chi phí thời gian (overhead) do việc gọi hàm gây ra.
++ Ràng buộc: Phải định nghĩa hàm trước khi sử dụng; Không áp dụng tính năng inline cho các hàm đệ quy.
+- Tham số có giá trị mặc định (Default Arguments):
++ Khai báo: Chỉ khai báo giá trị mặc định ở phần khai báo mẫu hàm (prototype).
++ Thứ tự: Các tham số mặc định phải nằm liên tục ở cuối danh sách (phía bên phải cùng).
++ Khi gọi hàm: Có thể bỏ qua các tham số từ phải sang trái theo thứ tự liên tiếp.
+- Biến tham chiếu (Reference Variables):
++ Bản chất: Đóng vai trò là bí danh (alias) đại diện cho một biến đã tồn tại.
++ Cú pháp: Kiểu &Tên_biến
++ Đặc điểm: Bắt buộc phải khởi tạo ngay khi khai báo; Sử dụng const kiểu &tên_biến nếu chỉ muốn đọc và không cho phép thay đổi giá trị của biến gốc thông qua tham chiếu.
+- Chồng hàm (Function Overloading):
++ Khái niệm: Cho phép định nghĩa nhiều hàm dùng chung một tên nhưng thực hiện thao tác trên các tập dữ liệu khác nhau.
++ Quy tắc phân biệt: Các hàm chồng bắt buộc phải khác nhau về danh sách tham số (số lượng tham số hoặc kiểu dữ liệu của tham số); Không thể chồng hàm nếu hai hàm có danh sách tham số giống hệt nhau mà chỉ khác nhau ở kiểu trả về (trình biên dịch sẽ báo lỗi).
++ Từ khóa typedef chỉ tạo tên gọi thay thế chứ không tạo kiểu dữ liệu mới, do đó không hỗ trợ tạo sự khác biệt để chồng hàm.
++ Kiểu mảng và con trỏ được xem là đồng nhất trong tham số hàm.
++ Có thể dùng từ khóa const kết hợp với con trỏ hoặc tham chiếu để tạo sự khác biệt giữa các phiên bản hàm chồng.
+- Chồng toán tử.
