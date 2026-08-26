@@ -1,1 +1,44 @@
+Lớp và đối tượng :
+1. Khái niệm & Cấu trúc của Lớp (Class)
+Bản chất: Lớp là sự mở rộng của struct (C) và record (Pascal), bao gồm các thuộc tính (dữ liệu) và phương thức (hàm thành viên).
 
+Phạm vi truy cập:
+private: Mặc định nếu không chỉ định. Chỉ được truy cập nội bộ trong thân lớp.
+public: Cho phép truy cập từ bên ngoài lớp.
+
+Cú pháp định nghĩa:
+class Ten_lop {
+private:
+    // Khai báo thuộc tính (biến, con trỏ, struct...)
+public:
+    // Khai báo các phương thức
+};
+
+2. Quản lý Đối tượng & Con trỏ this
+
+Biến & Mảng đối tượng: Truy cập thuộc tính/phương thức qua dấu chấm . (ví dụ: obj.Thuoc_tinh, arr[i].Phuong_thuc()).
+Con trỏ đối tượng: Truy cập thông qua toán tử -> (ví dụ: ptr->Phuong_thuc(), ptr[i].Thuoc_tinh).
+Con trỏ this: Là con trỏ đặc biệt đóng vai trò tham số ngầm định thứ nhất của phương thức, chứa địa chỉ của chính đối tượng đang gọi phương thức đó.
+
+3. Phân biệt Hàm thành viên, Hàm thông thường & Hàm bạn
+Hàm thông thường: Nhận đối tượng làm tham số nhưng không thể truy cập trực tiếp thành phần private.
+Hàm bạn (friend function): Khai báo bằng từ khóa friend. Không phải phương thức của lớp nhưng có quyền truy cập các thành phần private của lớp đó. Một hàm có thể là bạn của nhiều lớp.
+
+4. Bộ ba Phương thức Đặc biệt
+Hàm tạo (Constructor): Trùng tên với lớp, không có kiểu trả về, dùng để khởi tạo đối tượng. Nếu lớp tự định nghĩa ít nhất 1 hàm tạo, trình biên dịch sẽ không tự sinh hàm tạo mặc định không tham số.
+Hàm tạo sao chép (Copy Constructor): Cú pháp Ten_lop(const Ten_lop &obj). Cần tự viết khi lớp có thuộc tính con trỏ/cấp phát động để tránh lỗi sao chép nông (shallow copy).
+Hàm hủy (Destructor): Cú pháp ~Ten_lop(). Tự động được gọi để dọn dẹp/giải phóng bộ nhớ khi đối tượng bị hủy.
+
+5. Chồng toán tử (Operator Overloading)
+Cú pháp chung: kieu_tra_ve operator Symbol(danh_sach_tham_so)
+Phân loại toán tử theo khả năng nạp chồng:
+Loại toán tử:
+Được phép chồng+, -, *, /, %, ^, &, |, ~, !, =, <, >, +=, -=, *=, /=, %=, ^=, &=, |=, <<, >>, >>=, <<=, ==, !=, <=, >=, &&, ||, ++, --, ->*, ,, ->, [], (), new, delete
+
+KHÔNG THỂ chồng., .*, ::, ?:, sizeof
+
+Quy tắc nạp chồng quan trọng:
+Toán tử [] và () bắt buộc phải là phương thức thành viên của lớp.
+Toán tử nhập/xuất << và >> không thể là hàm thành viên (phải dùng hàm ngoài/friend), vì tham số bên trái phải là luồng ostream& hoặc istream&.
+Toán tử 2 ngôi: Viết dưới dạng phương thức thành viên (nhận 1 tham số) hoặc hàm độc lập/friend (nhận 2 tham số).
+Toán tử 1 ngôi: Viết dưới dạng phương thức thành viên (không nhận tham số) hoặc hàm độc lập/friend (nhận 1 tham số).
